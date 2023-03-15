@@ -11,13 +11,12 @@ branches: [master]
 
 jobs:
 build:
-runs-on: self-hosted
-
+    runs-on: self-hosted
 
     strategy:
         matrix:
             node-version: [16.x]
-            
+
     steps:
         - uses: actions/checkout@v2
 
@@ -33,4 +32,4 @@ runs-on: self-hosted
             pwd
             npm i --force
             npm run build
-            
+
